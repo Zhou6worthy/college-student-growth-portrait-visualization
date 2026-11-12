@@ -1,0 +1,614 @@
+{
+  "as_of": "2026-11-12",
+  "note": "现有模拟数据库的完整响应，预警样例通过keyword筛选单个学号以控制文件体积。",
+  "responses": {
+    "/api/meta/filters": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "majors": [
+          "人工智能",
+          "数据科学",
+          "网络安全",
+          "计算机科学",
+          "软件工程"
+        ],
+        "grades": [
+          "大一",
+          "大二",
+          "大三",
+          "大四",
+          "已毕业"
+        ],
+        "genders": [
+          "女",
+          "男"
+        ]
+      }
+    },
+    "/api/students?page=1&page_size=2": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "list": [
+          {
+            "student_id": "20230015",
+            "name": "王东",
+            "gender": "女",
+            "major": "数据科学",
+            "enroll_year": 2023,
+            "total_score": 67.23,
+            "level": "合格",
+            "academic": 66.5
+          },
+          {
+            "student_id": "20230020",
+            "name": "李坤",
+            "gender": "女",
+            "major": "数据科学",
+            "enroll_year": 2023,
+            "total_score": 65.2,
+            "level": "合格",
+            "academic": 74.33
+          }
+        ],
+        "total": 500,
+        "page": 1,
+        "page_size": 2
+      }
+    },
+    "/api/students/20230015/portrait": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "basic": {
+          "student_id": "20230015",
+          "name": "王东",
+          "gender": "女",
+          "major": "数据科学",
+          "enroll_year": 2023,
+          "enroll_date": "2023-02-27"
+        },
+        "total_score": 67.23,
+        "level": "合格",
+        "tags": [],
+        "metrics": [
+          {
+            "key": "academic",
+            "label": "学业表现",
+            "value": 66.5,
+            "desc": "各课程历史均分的等权平均"
+          },
+          {
+            "key": "reading",
+            "label": "阅读素养",
+            "value": 66.67,
+            "desc": "累计借阅12次为满分参考"
+          },
+          {
+            "key": "sport",
+            "label": "运动健康",
+            "value": 48.75,
+            "desc": "最近56天累计运动1200分钟为满分参考"
+          },
+          {
+            "key": "routine",
+            "label": "作息规律",
+            "value": 39.07,
+            "desc": "早餐消费日覆盖率与非夜宵占比的加权分"
+          },
+          {
+            "key": "consumption",
+            "label": "消费理性",
+            "value": 84.08,
+            "desc": "正餐、水果和日用品占消费金额的比例"
+          },
+          {
+            "key": "diversity",
+            "label": "生活丰富度",
+            "value": 100,
+            "desc": "消费地点、品类与运动类型的多样性"
+          }
+        ],
+        "missing_metrics": [],
+        "as_of": "2026-11-12",
+        "metric_version": "v1"
+      }
+    },
+    "/api/students/20230015/scores": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "trend": [
+          {
+            "label": "2023-06",
+            "value": 66.5
+          }
+        ],
+        "courses": [
+          {
+            "label": "大学英语",
+            "value": 94
+          },
+          {
+            "label": "计算机组成原理",
+            "value": 91
+          },
+          {
+            "label": "数据结构",
+            "value": 73
+          },
+          {
+            "label": "Python编程",
+            "value": 48
+          },
+          {
+            "label": "操作系统",
+            "value": 47
+          },
+          {
+            "label": "高等数学",
+            "value": 46
+          }
+        ],
+        "best_course": "大学英语",
+        "weak_course": "高等数学"
+      }
+    },
+    "/api/students/20230015/consume": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "structure": [
+          {
+            "label": "日用品",
+            "value": 1,
+            "amount": 67.3
+          },
+          {
+            "label": "正餐",
+            "value": 17,
+            "amount": 325.68
+          },
+          {
+            "label": "水果",
+            "value": 3,
+            "amount": 40.09
+          },
+          {
+            "label": "零食",
+            "value": 2,
+            "amount": 17.28
+          },
+          {
+            "label": "饮品",
+            "value": 7,
+            "amount": 64.69
+          }
+        ],
+        "hourly": [
+          {
+            "label": "0",
+            "value": 0
+          },
+          {
+            "label": "1",
+            "value": 0
+          },
+          {
+            "label": "2",
+            "value": 0
+          },
+          {
+            "label": "3",
+            "value": 0
+          },
+          {
+            "label": "4",
+            "value": 0
+          },
+          {
+            "label": "5",
+            "value": 0
+          },
+          {
+            "label": "6",
+            "value": 0
+          },
+          {
+            "label": "7",
+            "value": 2
+          },
+          {
+            "label": "8",
+            "value": 1
+          },
+          {
+            "label": "9",
+            "value": 2
+          },
+          {
+            "label": "10",
+            "value": 1
+          },
+          {
+            "label": "11",
+            "value": 2
+          },
+          {
+            "label": "12",
+            "value": 2
+          },
+          {
+            "label": "13",
+            "value": 2
+          },
+          {
+            "label": "14",
+            "value": 2
+          },
+          {
+            "label": "15",
+            "value": 0
+          },
+          {
+            "label": "16",
+            "value": 0
+          },
+          {
+            "label": "17",
+            "value": 3
+          },
+          {
+            "label": "18",
+            "value": 5
+          },
+          {
+            "label": "19",
+            "value": 5
+          },
+          {
+            "label": "20",
+            "value": 1
+          },
+          {
+            "label": "21",
+            "value": 1
+          },
+          {
+            "label": "22",
+            "value": 1
+          },
+          {
+            "label": "23",
+            "value": 0
+          }
+        ],
+        "summary": {
+          "avg_daily": 1.52,
+          "total_amount": 515.04,
+          "record_count": 30,
+          "breakfast_rate": 0.1724,
+          "night_rate": 0.1
+        }
+      }
+    },
+    "/api/students/20230015/library": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "top": [
+          {
+            "label": "3D打印技术基础",
+            "value": 1
+          },
+          {
+            "label": "C++ Primer",
+            "value": 1
+          },
+          {
+            "label": "中国历史地理十五讲",
+            "value": 1
+          },
+          {
+            "label": "人生的智慧",
+            "value": 1
+          },
+          {
+            "label": "国富论",
+            "value": 1
+          },
+          {
+            "label": "法国大革命史",
+            "value": 1
+          },
+          {
+            "label": "认知觉醒",
+            "value": 1
+          },
+          {
+            "label": "金瓶梅（节编本）",
+            "value": 1
+          }
+        ],
+        "total": 8,
+        "avg_days": 15.25
+      }
+    },
+    "/api/students/20230015/sport": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "types": [
+          {
+            "label": "健身",
+            "value": 3
+          },
+          {
+            "label": "篮球",
+            "value": 2
+          },
+          {
+            "label": "游泳",
+            "value": 1
+          },
+          {
+            "label": "羽毛球",
+            "value": 1
+          },
+          {
+            "label": "跑步",
+            "value": 1
+          }
+        ],
+        "total_minutes": 585,
+        "total_calories": 4914,
+        "weekly": [
+          {
+            "label": "第1周",
+            "value": 0
+          },
+          {
+            "label": "第2周",
+            "value": 0
+          },
+          {
+            "label": "第3周",
+            "value": 0
+          },
+          {
+            "label": "第4周",
+            "value": 0
+          },
+          {
+            "label": "第5周",
+            "value": 0
+          },
+          {
+            "label": "第6周",
+            "value": 0
+          },
+          {
+            "label": "第7周",
+            "value": 0
+          },
+          {
+            "label": "第8周",
+            "value": 585
+          }
+        ]
+      }
+    },
+    "/api/analytics/overview": {
+      "code": 0,
+      "message": "ok",
+      "data": {
+        "students": 500,
+        "avg_score": 62.62,
+        "avg_metrics": [
+          {
+            "label": "学业表现",
+            "value": 67.43
+          },
+          {
+            "label": "阅读素养",
+            "value": 38.17
+          },
+          {
+            "label": "运动健康",
+            "value": 58.01
+          },
+          {
+            "label": "作息规律",
+            "value": 34.15
+          },
+          {
+            "label": "消费理性",
+            "value": 72.89
+          },
+          {
+            "label": "生活丰富度",
+            "value": 97.35
+          }
+        ],
+        "alert_count": 449,
+        "top_major": "计算机科学"
+      }
+    },
+    "/api/analytics/majors": {
+      "code": 0,
+      "message": "ok",
+      "data": [
+        {
+          "major": "人工智能",
+          "students": 100,
+          "avg_score": 62.02,
+          "dims": [
+            {
+              "label": "学业表现",
+              "value": 66.51
+            },
+            {
+              "label": "阅读素养",
+              "value": 36.67
+            },
+            {
+              "label": "运动健康",
+              "value": 56.73
+            },
+            {
+              "label": "作息规律",
+              "value": 34.83
+            },
+            {
+              "label": "消费理性",
+              "value": 73.67
+            },
+            {
+              "label": "生活丰富度",
+              "value": 96.38
+            }
+          ]
+        },
+        {
+          "major": "数据科学",
+          "students": 100,
+          "avg_score": 62.53,
+          "dims": [
+            {
+              "label": "学业表现",
+              "value": 67.33
+            },
+            {
+              "label": "阅读素养",
+              "value": 38.25
+            },
+            {
+              "label": "运动健康",
+              "value": 57.01
+            },
+            {
+              "label": "作息规律",
+              "value": 33.67
+            },
+            {
+              "label": "消费理性",
+              "value": 72.79
+            },
+            {
+              "label": "生活丰富度",
+              "value": 97.77
+            }
+          ]
+        },
+        {
+          "major": "网络安全",
+          "students": 44,
+          "avg_score": 62.14,
+          "dims": [
+            {
+              "label": "学业表现",
+              "value": 67.33
+            },
+            {
+              "label": "阅读素养",
+              "value": 36.93
+            },
+            {
+              "label": "运动健康",
+              "value": 54.87
+            },
+            {
+              "label": "作息规律",
+              "value": 35.31
+            },
+            {
+              "label": "消费理性",
+              "value": 72.61
+            },
+            {
+              "label": "生活丰富度",
+              "value": 97.95
+            }
+          ]
+        },
+        {
+          "major": "计算机科学",
+          "students": 128,
+          "avg_score": 63.09,
+          "dims": [
+            {
+              "label": "学业表现",
+              "value": 67.85
+            },
+            {
+              "label": "阅读素养",
+              "value": 40.3
+            },
+            {
+              "label": "运动健康",
+              "value": 59.0
+            },
+            {
+              "label": "作息规律",
+              "value": 34.16
+            },
+            {
+              "label": "消费理性",
+              "value": 72.43
+            },
+            {
+              "label": "生活丰富度",
+              "value": 97.47
+            }
+          ]
+        },
+        {
+          "major": "软件工程",
+          "students": 128,
+          "avg_score": 62.84,
+          "dims": [
+            {
+              "label": "学业表现",
+              "value": 67.87
+            },
+            {
+              "label": "阅读素养",
+              "value": 37.57
+            },
+            {
+              "label": "运动健康",
+              "value": 59.88
+            },
+            {
+              "label": "作息规律",
+              "value": 33.6
+            },
+            {
+              "label": "消费理性",
+              "value": 72.93
+            },
+            {
+              "label": "生活丰富度",
+              "value": 97.46
+            }
+          ]
+        }
+      ]
+    },
+    "/api/analytics/alerts?keyword=20230015": {
+      "code": 0,
+      "message": "ok",
+      "data": [
+        {
+          "student_id": "20230015",
+          "name": "王东",
+          "major": "数据科学",
+          "total_score": 67.23,
+          "level": "合格",
+          "reason": "学业预警"
+        }
+      ]
+    }
+  }
+}
